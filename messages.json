@@ -1,7 +1,1 @@
-{"1234567890":{
-    "name":"Admin",
-    "email":"admin@localhost",
-    "msg":"You Are Wellcome!",
-    "time":"01:13"
-    }
-}
+{"1234567890": {"msg": "You Are Wellcome!", "time": "01:13", "name": "Admin", "email": "admin@localhost"}, "1518026206": {"msg": "Hello? friends! Glad to write in this web-servise!!", "name": "Grisha", "email": "fghr@mail.com"}}

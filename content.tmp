@@ -6,7 +6,7 @@
 </head>
 <body>
 	{logform}
-	<h1>Guest Book</h1>
+	<h1>Привет Олеся!!!</h1>
 	{form}
 	{messages}
 </body>
