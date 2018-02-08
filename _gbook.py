@@ -1,7 +1,7 @@
 import json
 from datetime import datetime
 import time
-
+    #эТО ОСНОВНОЙ КЛАСС
 class Gbook:
     LOGIN = 'admin'
     PASSWORD = 'pass@word1'
