@@ -1,1 +1,7 @@
-{"1234567890": {"email": "admin@localhost", "name": "Admin", "msg": "You Are Wellcome!", "time": "01:13"}, "1518107460": {"email": "vgyhfhy", "name": "fgyfy", "msg": "hgu9iddr8rrhui\r\ntnjgehjks\r\nfghdjkdfk\r\nfngdjknfdhjk"}, "1518026206": {"email": "fghr@mail.com", "name": "Grisha", "msg": "Hello? friends! Glad to write in this web-servise!!"}, "1518107428": {"email": "hguioufo", "name": "gfhdju", "msg": "hjif0ungfohujhjif0ungfohujhjif0ungfohujhjif0ungfohuj"}}
+{
+    "1234567890":{
+        "name":"Admin", 
+        "email":"admin@doogol.com", 
+        "msg":"Добро пожаловать!"
+    }
+}
