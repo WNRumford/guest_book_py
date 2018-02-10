@@ -1,8 +1,8 @@
 <div style="padding-left:50px">
 	<form action="/gbook/index.py" method="post">
-		Name: <input type="text" name="name"><br>
-		Email: <input type="text" name="email"><br>
-		<textarea name="msg" cols="30" rows="10"></textarea><br>
+		<p>Name: <input type="text" name="name"><br></p>
+		<p>Email: <input type="text" name="email"><br></p>
+		<p><textarea name="msg" cols="30" rows="10"></textarea><br></p>
 		<input type="hidden" name="operation" value="post">
 		<input type="submit" value="Publish">
 	</form>
