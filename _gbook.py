@@ -1,6 +1,7 @@
 import json
 from datetime import datetime
-#1.37
+import time
+
 class Gbook:
     LOGIN = "admin"
     PASSWORD = "pass@word1"
@@ -21,6 +22,9 @@ class Gbook:
             
         with open(self.TMP_CONTENT, 'r', encoding='utf-8') as f:
             self.content = f.read()
+        
+        with open(self.TMP_LOGFORM, 'r', encoding='utf-8') as f:
+            self.logform = f.read()
         
         try:
             with open(self.DB, 'r', encoding='utf-8') as f:
@@ -46,8 +50,15 @@ class Gbook:
                                             name=m[id]["name"],
                                             email=m[id]["email"])
     
+    
     def save_msg(self, name, email, msg):
-        pass
+        ts = int(time.time())
+        with open(self.DB, 'r', encoding='utf-8') as f:
+            m = json.load(f)
+        m[ts] = {"name":name, "email":email, "msg":msg}
+        with open(self.DB, 'w', encoding='utf-8') as f:
+            json.dump(m, f)
+    
     
     def delete_msg(self, id):
         pass

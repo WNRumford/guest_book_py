@@ -1,7 +1,1 @@
-{
-    "1234567890":{
-        "name":"Admin", 
-        "email":"admin@doogol.com", 
-        "msg":"Добро пожаловать!"
-    }
-}
+{"1518474143": {"msg": "Hi! I like this site!", "name": "Mike Brown", "email": "mike1883@mail.com"}, "1518474262": {"msg": "Hi! I like this site!", "name": "Mike Brown", "email": "mike1883@mail.com"}, "1234567890": {"msg": "\u0414\u043e\u0431\u0440\u043e \u043f\u043e\u0436\u0430\u043b\u043e\u0432\u0430\u0442\u044c!", "name": "Admin", "email": "admin@doogol.com"}, "1518473845": {"msg": "Hi! I like this site!", "name": "Mike Brown", "email": "mike1883@mail.com"}}
