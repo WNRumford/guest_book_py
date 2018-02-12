@@ -1,7 +1,10 @@
-<p>
-	<a href="mailto:{email}">{name}</a>
-</p>
-<blockquote>
-	<em><small>{datetime}</small></em>
-	<br>{msg}
-</blockquote>
+<hr>
+<div style="padding-left:50px; padding-top:20px">
+	<p>
+		<a href="mailto:{email}">{name}</a>
+	</p>
+	<blockquote>
+		<em><small>{datetime}</small></em>
+		<br>{msg}
+	</blockquote>
+</div>
