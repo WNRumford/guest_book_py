@@ -2,6 +2,7 @@
 
 from _gbook import Gbook
 from cgi import FieldStorage
+from http import cookies
 import os
 import html
 
@@ -10,6 +11,11 @@ gbook = Gbook()
 params = FieldStorage()
 
 admin = False
+
+if "HTTP_COOKIE" in os.environ:
+    cookie = cookies.SimpleCookie(os.environ.get("HTTP_COOKIE")).get("admin")
+    if cookie is not None:
+        admin = True
 
 if os.environ.get("REQUEST_METHOD") == "POST":
     operation = params.getvalue("operation", "")
