@@ -64,7 +64,11 @@ class Gbook:
     
     
     def delete_msg(self, id):
-        pass
+        with open(self.DB, "r", encoding="utf-8") as f:
+            m = json.load(f)
+        del m[id]
+        with open(self.DB, "w", encoding="utf-8") as f:
+            json.dump(m, f)
     
     
     def login(self, login, password):
@@ -77,4 +81,10 @@ class Gbook:
         return False 
     
     def logout(self):
-        pass
+        cookie = cookies.SimpleCookie()
+        cookie["admin"] = "0"
+        cookie["admin"]["httponly"] = 1
+        exp = time.gmtime(time.time() - 3600)
+        exp = time.strftime("%a, %d %b %Y %T GMT", exp)
+        cookie["admin"]["expires"] = exp
+        print(cookie.output())

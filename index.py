@@ -28,6 +28,14 @@ if os.environ.get("REQUEST_METHOD") == "POST":
         login = html.escape(params.getvalue("login"))
         password = html.escape(params.getvalue("password"))
         admin = gbook.login(login, password)
+    elif operation == "logout":
+        gbook.logout()
+        admin = False
+
+if 'del' in params:
+    id = int(params.getvalue('del'))
+    if id:
+        gbook.delete_msg(str(id))
 
 gbook.read_msgs(admin)
 
