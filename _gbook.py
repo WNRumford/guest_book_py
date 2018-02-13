@@ -1,5 +1,6 @@
 import json
 from datetime import datetime
+from http import cookies
 import time
 
 class Gbook:
@@ -34,7 +35,7 @@ class Gbook:
                 json.dump({}, f)
             
         
-    def read_msgs(self):
+    def read_msgs(self, admin):
         with open(self.DB, 'r', encoding='utf-8') as f:
             m = json.load(f)
         if not m:
@@ -49,6 +50,8 @@ class Gbook:
                                             datetime=date,
                                             name=m[id]["name"],
                                             email=m[id]["email"])
+            if admin:
+                self.messages += "<p><a href='index.py?del={}'>Delete</a></p>".format(id)
     
     
     def save_msg(self, name, email, msg):
@@ -63,8 +66,15 @@ class Gbook:
     def delete_msg(self, id):
         pass
     
+    
     def login(self, login, password):
-        pass
+        if login == self.LOGIN and password == self.PASSWORD:
+            cookie = cookies.SimpleCookie()
+            cookie["admin"] = "1"
+            cookie["admin"]["httponly"] = 1
+            print(cookie.output())
+            return True
+        return False 
     
     def logout(self):
         pass
